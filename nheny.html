@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Redirect</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            if (password === '123789') {
+                window.location.href = 'https://drive.google.com/file/d/1SQ56CgtqZy8Woirw6dLBSakRuWAZ7LBL/view';
+            } else if (password === '987321') {
+                window.location.href = 'https://drive.google.com/file/d/1FNcm96DyUo5pradU9YWvn36Z_I4ZTkBP/view';
+            } else {
+                alert('Incorrect password');
+            }
+            return false; // Prevent form submission
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return checkPassword()">
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
